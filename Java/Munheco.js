@@ -5,6 +5,8 @@ var pincel = pizarra.getContext("2d");
 pincel.fillStyle = ("rgb(0,0,0)");
 pincel.fillRect(0, 0, 600, 500);
 
+// funcion que dibuja el munheco paso a paso en 
+// el canvas segun el jugador va fallando
 function pintarMunheco(numero) {
     switch (numero) {
         case 1:
@@ -92,7 +94,9 @@ function pintarMunheco(numero) {
             break
 
         default:
-            pincel.font = "25pt Verdana";
+            // si el numero de caracteres en la cadena "letra incorrecta"
+            // es mayor a 8 el juego termina
+            pincel.font = "25pt Montserrat";
             pincel.fillStyle = "red";
             pincel.textAlign = "center";
             pincel.fillText("FIN DEL JUEGO", 450, 280);

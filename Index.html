@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Styles.css">
+    <link rel="stylesheet" href="/Css/Styles.css">
+    <!-- FUENTES PERSONALIZADAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;500&display=swap"
+        rel="stylesheet">
+
     <title>Juego Del Ahorcado</title>
 </head>
 
 <body>
+    
     <header>
         <h1>JUEGO DEL AHORCADO</h1>
     </header>
 
     <main>
         <section>
-            <div class="box">
-                <canvas height="500" width="600" id="pizarra"></canvas>
-            </div>
+            <div class="box oculto areaDibujo">
+                <canvas height="500" width="600" id="pizarra" clase="pizarra"></canvas>            </div>
         </section>
 
         <section>
-            <div class="box">
-                <textarea id="palabraSecreta" cols="30" rows="3"></textarea>
-                <textarea id="letraIncorrecta" cols="30" rows="3"></textarea>
+            <div class="box oculto areasDeTexto">
+                <textarea class="palabraSecreta" disabled></textarea>
+                <textarea class="letraIncorrecta" disabled></textarea>
             </div>
-            <div>
-                <input type="button" class="btn" id="btnIniciar" value="Iniciar Juego">
-                <input type="button" class="btn" id="btnAgregar" value="Agregar Palabra">                
+            <div class="box oculto camposAgregarPalabra">
+                <textarea class="agregarPalabra"></textarea>
+                <textarea class="mensaje"></textarea>
+            </div>
+
+            <div class="controls">
+                <input type="button" class="btn btnIniciar" value="Iniciar Juego">
+                <input type="button" class="btn btnAgregarPalabra" value="Agregar Palabra">
+                <input type="button" class="btn oculto btnCancelar" value="cancelar">
+                <input type="button" class="btn oculto btnAgregar" value="Agregar">
             </div>
         </section>
     </main>
 
     <footer>
 
-    </footer>
-
+    </footer>   
     <script src="/Java/Main.js"></script>
     <script src="/Java/Munheco.js"></script>
     <script src="/Java/Logica.js"></script>
-    
+    <script src="/Java/Presentacion.js"></script>
+
 </body>
+
 </html>

@@ -1,21 +1,90 @@
+/* RESET CSS
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,26 +92,153 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+} */
+
+
+/* STYLES CSS */
+body {
+	width: 90%;
+	height: 600px;
+	font-family: 'Montserrat', sans-serif;
+	/* FONDO PERSONALIZADO */
+	background-color: #e1e9f0;
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236cabdd' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+h1 {
+	font-size: 4rem;
+	font-family: 'Gochi Hand', cursive;
+	text-align: center;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5px;
+
+}
+
+canvas {
+	width: auto;
+	height: auto;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+}
+
+textarea {
+	border: transparent;
+	border-radius: 5px;
+	width: 300px;
+	height: 160%;
+	resize: none;
+	font-size: 2.5rem;
+}
+
+.letraIncorrecta {
+	color: red;
+
+}
+
+.controls {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+}
+
+.btn {
+	border: transparent;
+	background-color: crimson;
+	border-radius: 7px;
+	margin: 5px;
+	width: 180px;
+	height: auto;
+	font-size: 140%;
+}
+
+.btnIniciar {
+	margin-top: 160px;
+}
+
+.btnAgregarPalabra {
+	margin-top: 160px;
+}
+
+.oculto {
+	display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	body {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	.controls {
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.areasDeTexto {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.camposAgregarPalabra{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.oculto{
+		display: none;
+	}
 }
